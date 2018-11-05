@@ -57,10 +57,6 @@ def main(config):
     if config.mode == 'train':    
         solver.train()
 
-    # elif config.mode == 'test':
-    #     solver.test()
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
@@ -98,9 +94,9 @@ if __name__ == '__main__':
     parser.add_argument('--use_tensorboard', type=str2bool, default=True)
 
     # Directories.
-    parser.add_argument('--train_data_dir_casia', type=str, default='/scratch/sxliu/data_exp/CASIA_dataset/mc/train')
-    parser.add_argument('--test_data_dir', type=str, default='/scratch/sxliu/data_exp/CASIA_dataset/mc/test')
-    parser.add_argument('--src_wav_dir', type=str, default='/scratch/sxliu/data_exp/CASIA_dataset/CASIA')
+    parser.add_argument('--train_data_dir_casia', type=str, default='datasets/CASIA_dataset/mc/train')
+    parser.add_argument('--test_data_dir', type=str, default='datasets/CASIA_dataset/mc/test')
+    parser.add_argument('--src_wav_dir', type=str, default='datasets/CASIA_dataset/CASIA')
     parser.add_argument('--logdir_root', type=str, default='./logs')
     parser.add_argument('--log_msg', type=str, default='mc_lf0cwt_lecwt-liuchang-normal-angry')
     parser.add_argument('--log_dir', type=str, default=None)

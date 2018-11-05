@@ -7,10 +7,6 @@ from os.path import join, basename, dirname, split
 import numpy as np
 
 min_length = 256
-emotions = ['sad', 'normal', 'angry']
-emo2idx = dict(zip(emotions, range(len(emotions))))
-# target_speaker = 'wangzhe'
-# target_emo = 'angry'
 
 def to_categorical(y, num_classes=None):
     """Converts a class vector (integers) to binary class matrix.
@@ -40,7 +36,7 @@ def to_categorical(y, num_classes=None):
     
 
 class MyDataset(data.Dataset):
-    """Dataset for accented MCEP feats."""
+    
     def __init__(self, data_dir, target_speaker, source_emotion, target_emotion):
         mc_files_A = glob.glob(join(data_dir, f'{target_speaker}-{source_emotion}*.npy'))
         mc_files_B = glob.glob(join(data_dir, f'{target_speaker}-{target_emotion}*.npy'))
@@ -52,10 +48,6 @@ class MyDataset(data.Dataset):
     def rm_too_short_utt(self, mc_files, min_length=min_length):
         new_mc_files = []
         for mcfile in mc_files:
-            # filter out other emotions, which not in the global emotion list.
-            # emo = basename(mcfile).split('-')[1]
-            # if not emo in emotions: 
-            #     continue
             mc = np.load(mcfile)
             if mc.shape[0] > min_length:
                 new_mc_files.append(mcfile)
@@ -88,7 +80,7 @@ class MyDataset(data.Dataset):
 
 
 class TestDataset(object):
-    """Dataset for testing."""
+    """Dataset for validation."""
     def __init__(self, data_dir, src_wav_dir, trg_spk, src_emo, trg_emo):
         self.trg_spk = trg_spk
         self.trg_emo = trg_emo
@@ -120,9 +112,6 @@ class TestDataset(object):
         self.mcep_std_trg = self.trg_spk_stats['coded_sps_std']
         
         self.src_wav_dir = src_wav_dir
-        # self.emo_idx = emo2idx[trg_emo]
-        # emo_cat = to_categorical([self.emo_idx], num_classes=len(emotions))
-        # self.emo_c_trg = emo_cat
 
     def get_batch_test_data(self, batch_size=8):
         batch_data = []
@@ -130,7 +119,6 @@ class TestDataset(object):
             mcfile = self.mc_files[i]
             filename = basename(mcfile).split('-')[-1]
             wavfile_path = glob.glob(join(f"{self.src_wav_dir}/*/{self.trg_spk}/{self.src_emo}", filename.replace('npy', 'wav')))[0]
-            # wavfile_path = join(self.src_wav_dir, filename.replace('npy', 'wav'))
             batch_data.append(wavfile_path)
         return batch_data       
 
@@ -143,20 +131,6 @@ def get_loader(data_dir, target_speaker, source_emotion, target_emotion, batch_s
                                   drop_last=True)
     return data_loader
 
-
-if __name__ == '__main__':
-    loader = get_loader('./mc/train')
-    data_iter = iter(loader)
-    for i in range(10):
-        mc, spk_idx, acc_idx, spk_acc_cat = next(data_iter)
-        print('-'*50)
-        print(mc.size())
-        print(spk_idx.size())
-        print(acc_idx.size())
-        print(spk_acc_cat.size())
-        print(spk_idx.squeeze_())
-        print(spk_acc_cat)
-        print('-'*50)
 
 
 

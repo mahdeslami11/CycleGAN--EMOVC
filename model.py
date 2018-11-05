@@ -2,8 +2,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-# from data_loader import get_loader
-
 
 class ResidualBlock(nn.Module):
     """Residual Block with instance normalization."""
@@ -23,7 +21,6 @@ class Generator(nn.Module):
     """Generator network."""
     def __init__(self, conv_dim=64, repeat_num=6):
         super(Generator, self).__init__()
-        # c_dim = num_speakers + num_emotions + 2              # 2 for gender
         layers = []
         layers.append(nn.Conv2d(1, conv_dim, kernel_size=(3, 9), padding=(1, 4), bias=False))
         layers.append(nn.InstanceNorm2d(conv_dim, affine=True, track_running_stats=True))
@@ -52,65 +49,10 @@ class Generator(nn.Module):
         self.main = nn.Sequential(*layers)
 
     def forward(self, x):
-        # Replicate spatially and concatenate domain information.
-        # c = c.view(c.size(0), c.size(1), 1, 1)
-        # c = c.repeat(1, 1, x.size(2), x.size(3))
-        # x = torch.cat([x, c], dim=1)
         return self.main(x)
 
-class Generator_dep(nn.Module):
-    """Generator network."""
-    def __init__(self, conv_dim=64, num_emotions=3, repeat_num=6):
-        super(Generator, self).__init__()
-        c_dim = num_emotions
-        layers = []
-        layers.append(nn.Conv2d(1, conv_dim, kernel_size=(3, 9), padding=(1, 4), bias=False))
-        layers.append(nn.InstanceNorm2d(conv_dim, affine=True, track_running_stats=True))
-        layers.append(nn.ReLU(inplace=True))
-
-        # Down-sampling layers.
-        curr_dim = conv_dim
-        for i in range(2):
-            layers.append(nn.Conv2d(curr_dim, curr_dim // 2, kernel_size=(4, 8), stride=(2, 2), padding=(1, 3), bias=False))
-            layers.append(nn.InstanceNorm2d(curr_dim // 2, affine=True, track_running_stats=True))
-            layers.append(nn.ReLU(inplace=True))
-            curr_dim = curr_dim // 2
-
-        # Bottleneck layers.
-        for i in range(repeat_num):
-            layers.append(ResidualBlock(dim_in=curr_dim, dim_out=curr_dim))
-
-        self.down_sample_layers = nn.Sequential(*layers)
-
-        # Up-sampling layers.
-        self.up_sample_layer1 = nn.Sequential(nn.ConvTranspose2d(curr_dim+c_dim, curr_dim * 2, kernel_size=4, stride=2, padding=1, bias=False),
-                                            nn.InstanceNorm2d(curr_dim * 2, affine=True, track_running_stats=True),
-                                            nn.ReLU(inplace=True))
-        curr_dim = curr_dim * 2
-        self.up_sample_layer2 = nn.Sequential(nn.ConvTranspose2d(curr_dim+c_dim, curr_dim * 2, kernel_size=4, stride=2, padding=1, bias=False),
-                                            nn.InstanceNorm2d(curr_dim * 2, affine=True, track_running_stats=True),
-                                            nn.ReLU(inplace=True))
-        curr_dim = curr_dim * 2
-
-        self.output_layers = nn.Sequential(nn.Conv2d(curr_dim, curr_dim, kernel_size=7, stride=1, padding=3, bias=False),
-                                           nn.ReLU(inplace=True),
-                                           nn.Conv2d(curr_dim, 1, kernel_size=7, stride=1, padding=3, bias=False))
-
-    def forward(self, x, c):
-        # Replicate spatially and concatenate domain information.
-        h = self.down_sample_layers(x)
-        c_1 = c.view(c.size(0), c.size(1), 1, 1)
-        c_1 = c_1.repeat(1, 1, h.size(2), h.size(3))
-        h = torch.cat([h, c_1], dim=1)
-        h = self.up_sample_layer1(h)
-        c_2 = c.view(c.size(0), c.size(1), 1, 1)
-        c_2 = c_2.repeat(1, 1, h.size(2), h.size(3))
-        h = torch.cat([h, c_2], dim=1)
-        h = self.up_sample_layer2(h)
-        return self.output_layers(h)
-
 class Discriminator(nn.Module):
-    """Discriminator network with PatchGAN."""
+    """Discriminator network."""
     def __init__(self, input_size=(36, 256), conv_dim=64, repeat_num=5):
         super(Discriminator, self).__init__()
         layers = []
@@ -123,8 +65,8 @@ class Discriminator(nn.Module):
             layers.append(nn.LeakyReLU(0.01))
             curr_dim = curr_dim * 2
 
-        kernel_size_0 = int(input_size[0] / np.power(2, repeat_num)) # 1
-        kernel_size_1 = int(input_size[1] / np.power(2, repeat_num)) # 8
+        kernel_size_0 = int(input_size[0] / np.power(2, repeat_num))
+        kernel_size_1 = int(input_size[1] / np.power(2, repeat_num))
         self.main = nn.Sequential(*layers)
         self.conv_dis = nn.Conv2d(curr_dim, 1, kernel_size=(kernel_size_0, kernel_size_1), stride=1, padding=0, bias=False) # padding should be 0
         
@@ -134,8 +76,8 @@ class Discriminator(nn.Module):
         return F.sigmoid(out_src)
 
 class Classifier(nn.Module):
-    """Classifier network with PatchGAN."""
-    def __init__(self, input_size=(36, 256), conv_dim=64, repeat_num=5, num_emotions=2):
+    """Classifier network."""
+    def __init__(self, input_size=(36, 256), conv_dim=64, repeat_num=5):
         super(Classifier, self).__init__()
         layers = []
         layers.append(nn.Conv2d(1, conv_dim, kernel_size=4, stride=2, padding=1))
@@ -147,37 +89,13 @@ class Classifier(nn.Module):
             layers.append(nn.LeakyReLU(0.01))
             curr_dim = curr_dim * 2
 
-        kernel_size_0 = int(input_size[0] / np.power(2, repeat_num)) # 1
-        kernel_size_1 = int(input_size[1] / np.power(2, repeat_num)) # 8
+        kernel_size_0 = int(input_size[0] / np.power(2, repeat_num)) 
+        kernel_size_1 = int(input_size[1] / np.power(2, repeat_num)) 
         self.main = nn.Sequential(*layers)
-        # self.conv_clf_gender = nn.Conv2d(curr_dim, 2, kernel_size=(kernel_size_0, kernel_size_1), stride=1, padding=0, bias=False)
-        # self.conv_clf_spks = nn.Conv2d(curr_dim, num_speakers, kernel_size=(kernel_size_0, kernel_size_1), stride=1, padding=0, bias=False)  # for num_speaker
         self.conv_clf_emos = nn.Conv2d(curr_dim, 1, kernel_size=(kernel_size_0, kernel_size_1), stride=1, padding=0, bias=False)  # for num_emotions
         
     def forward(self, x):
         h = self.main(x)
-        # out_cls_gender = self.conv_clf_gender(h)
-        # out_cls_spks = self.conv_clf_spks(h)
         out_cls_emos = self.conv_clf_emos(h)
-        return  F.sigmoid(out_cls_emos.view(out_cls_emos.size(0), 1)) #  out_cls_emos.size(1)))
-
-
-if __name__ == '__main__':
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    train_loader = get_loader('/scratch/sxliu/data_exp/VCTK-Corpus-22.05k/mc/train', 16, 'train', num_workers=1)
-    data_iter = iter(train_loader)
-    G = Generator().to(device)
-    D = Discriminator().to(device)
-    for i in range(10):
-        mc_real, spk_label_org, acc_label_org, spk_acc_c_org = next(data_iter)
-        mc_real.unsqueeze_(1) # (B, D, T) -> (B, 1, D, T) for conv2d
-        mc_real = mc_real.to(device)                         # Input mc.
-        spk_label_org = spk_label_org.to(device)             # Original spk labels.
-        acc_label_org = acc_label_org.to(device)             # Original acc labels.
-        spk_acc_c_org = spk_acc_c_org.to(device)             # Original spk acc conditioning.
-        mc_fake = G(mc_real, spk_acc_c_org)
-        print(mc_fake.size())
-        out_src, out_cls_spks, out_cls_emos = D(mc_fake)
-
-
+        return  F.sigmoid(out_cls_emos.view(out_cls_emos.size(0), 1))
 

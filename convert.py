@@ -80,9 +80,6 @@ class TestDataset(object):
         self.mcep_std_trg = self.trg_spk_stats['coded_sps_std']
         
         self.src_wav_dir = src_wav_dir
-        # self.emo_idx = emo2idx[trg_emo]
-        # emo_cat = to_categorical([self.emo_idx], num_classes=len(emotions))
-        # self.emo_c_trg = emo_cat
 
     def get_batch_test_data(self, batch_size=8):
         batch_data = []
@@ -90,7 +87,6 @@ class TestDataset(object):
             mcfile = self.mc_files[i]
             filename = basename(mcfile).split('-')[-1]
             wavfile_path = glob.glob(join(f"{self.src_wav_dir}/*/{self.trg_spk}/{self.src_emo}", filename.replace('npy', 'wav')))[0]
-            # wavfile_path = join(self.src_wav_dir, filename.replace('npy', 'wav'))
             batch_data.append(wavfile_path)
         return batch_data  
 
@@ -119,7 +115,6 @@ def test(config):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     G_A2B = Generator().to(device)
-    # G_B2A = Generator().to(device)
 
     test_loader = TestDataset(config.test_data_dir, 
                               config.src_wav_dir, 
@@ -222,9 +217,9 @@ if __name__ == '__main__':
     parser.add_argument('--resume_iters', type=int, default=18000, help='resume training from this step')
 
     # Directories.
-    parser.add_argument('--train_data_dir', type=str, default='/scratch/sxliu/data_exp/CASIA_dataset/mc/train')
-    parser.add_argument('--test_data_dir', type=str, default='/scratch/sxliu/data_exp/CASIA_dataset/mc/test')
-    parser.add_argument('--src_wav_dir', type=str, default='/scratch/sxliu/data_exp/CASIA_dataset/liuchang_wavs_trimmed')
+    parser.add_argument('--train_data_dir', type=str, default='datasets/CASIA_dataset/mc/train')
+    parser.add_argument('--test_data_dir', type=str, default='datasets/CASIA_dataset/mc/test')
+    parser.add_argument('--src_wav_dir', type=str, default='datasets/CASIA_dataset/liuchang_wavs_trimmed')
     parser.add_argument('--log_dir', type=str, default='./logs')
     parser.add_argument('--model_save_dir', type=str, default='./logs/1026-0749-28-2018-mc-lf0-le-liuchang-normal-sad/models')
     parser.add_argument('--convert_dir', type=str, default='./logs/1026-0749-28-2018-mc-lf0-le-liuchang-normal-sad/converted')
