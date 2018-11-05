@@ -10,6 +10,9 @@
 * Python 3.6 (or 3.5)
 * Pytorch 0.4.0 +
 * pyworld
+* pycwt
+* numpy 
+* scipy
 * tqdm
 * librosa
 * tensorboardX and tensorboard
