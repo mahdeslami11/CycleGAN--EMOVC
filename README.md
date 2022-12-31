@@ -69,6 +69,15 @@ https://github.com/jasonaidm/CycleGAN-EmoVC
 [translate.docx](https://github.com/mahdeslami11/CycleGAN--EMOVC/files/10327744/translate.docx)
 
 
+{the advantages of cycle Gan for EMOVC}
+
+
+the advantages offered by the CycleGAN model include
+(i)utilizing GAN loss instead of minimum generation loss, (ii)getting
+rid of source-target alignment errors and (iii) flexible non-parallel
+training, etc. 
+
+
 
 
 
