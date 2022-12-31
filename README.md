@@ -63,7 +63,12 @@ https://github.com/jasonaidm/CycleGAN-EmoVC
 *{my main article project }
 
 [dsp .pdf](https://github.com/mahdeslami11/CycleGAN--EMOVC/files/10327741/dsp.pdf)
+
+
+
 [translate.docx](https://github.com/mahdeslami11/CycleGAN--EMOVC/files/10327744/translate.docx)
+
+
 
 
 
