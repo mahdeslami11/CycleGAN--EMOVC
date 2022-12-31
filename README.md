@@ -131,6 +131,42 @@ training, etc.
 
 
 
+{suggestions for improving the articles}
+
+
+article 1 :  improving limitations with GAN
+article2:   
+Use CWT-based F0 as additional input to the decoder for
+Improved experimental spectrum conversion performance
+
+article 3:Mismatch between the listener's evaluation and the speaker's intention
+should be examined for feelings
+
+
+article 4:Margin filling with other features, such as STFT spectroscopy
+
+article 5:Investigate multiple-to-multiple emotion transformations and do further research on data that can be transformed into desired features
+
+article 6:Effectively produce a more effective rhythm and tone in the target voice
+
+
+article 7 :Increased clarity and emotional power of speech created by
+Suggested model
+
+
+article 8:More reviews and increasing the quality of the joint and separate effect of teaching the characteristics of the spectrum and prosody.
+
+
+
+article 9 :Further improvement of conversion quality, and this test on other instruments should be checked
+
+
+article 10:  more inspection
+Parallel input without voice conversion
+
+
+
+
 { more articles}
 
 [Nonparallel_Emotional_Speech_Conversion.pdf](https://github.com/mahdeslami11/CycleGAN--EMOVC/files/10327765/Nonparallel_Emotional_Speech_Conversion.pdf)
