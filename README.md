@@ -190,6 +190,9 @@ Parallel input without voice conversion
 https://s5.uupload.ir/files/sh1373bme/0A5F195B-7C54-459E-B891-850E368BEA75.MP4
 
 
+https://s5.uupload.ir/files/sh1373bme/0A5F195B-7C54-459E-B891-850E368BEA75.MP4
+
+
 
 
 
