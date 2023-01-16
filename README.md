@@ -181,7 +181,14 @@ Parallel input without voice conversion
 [FAIA-325-FAIA200325.pdf](https://github.com/mahdeslami11/CycleGAN--EMOVC/files/10327771/FAIA-325-FAIA200325.pdf)
 
 
-[Bao_Neumann_Vu.pdf](https://github.com/mahdeslami11/CycleGAN--EMOVC/files/10327773/Bao_Neumann_Vu.pdf)
+[Bao_Neumann_Vu.pdf](https://github.com/mahdeslami11/CycleGAN--EMOVC/files/10327773/Bao_Neumann_Vu.pdf)https://my.uupload.ir/dl/mbGEvvXv
+
+
+
+
+{the link of my video}
+https://my.uupload.ir/dl/mbGEvvXv
+
 
 
 
