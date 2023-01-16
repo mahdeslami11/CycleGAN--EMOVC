@@ -187,7 +187,8 @@ Parallel input without voice conversion
 
 
 {the link of my video}
-https://my.uupload.ir/dl/mbGEvvXv
+https://s5.uupload.ir/files/sh1373bme/0A5F195B-7C54-459E-B891-850E368BEA75.MP4
+
 
 
 
