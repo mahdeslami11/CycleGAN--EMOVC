@@ -1,31 +1,28 @@
-## EMOTIONAL VOICE CONVERSION WITH CYCLE-CONSISTENT ADVERSARIAL NETWORK
-
-![CycleGAN-EmoVC](https://user-images.githubusercontent.com/115186860/210151557-15eefd00-5773-4b16-9e66-422b3a125d16.png)
-
+## the effective of another tissue on hepar in pet images
+ https://ganj.irandoc.ac.ir/#/articles/48ac31b9d65757154dcd61d4b4bb160f
 
 
-
-We propose a non-parallel voice-conversion (VC) method that can learn a mapping from source to target speech without relying on parallel data.
-Emotional Voice Conversion, or emotional VC, is a technique of converting speech from one emotion state into another one, keeping the basic linguistic information and speaker identity. Previous approaches for emotional VC need parallel data and use dynamic time warping (DTW) method to temporally align the source-target speech parameters. These approaches often define a minimum generation loss as the objective function, such as L1 or L2 loss, to learn model parameters. Recently, cycle-consistent generative adversarial networks (CycleGAN) have been used successfully for non-parallel VC. This paper investigates the efficacy of using CycleGAN for emotional VC tasks. Rather than attempting to learn a mapping between parallel training data using a frame-to-frame minimum generation loss, the CycleGAN uses two discriminators and one classifier to guide the learning process, where the discriminators aim to differentiate between the natural and converted speech and the classifier aims to classify the underlying emotion from the natural and converted speech. The training process of the CycleGAN models randomly pairs source-target speech parameters, without any temporal alignment operation. The objective and subjective evaluation results confirm the effectiveness of using CycleGAN models for emotional VC. The non-parallel training for a CycleGAN indicates its potential for non-parallel emotional VC
+Many errors occur in PET imaging that reduce the quality of the image. One of these errors is the drop error, which is well resolved by combining CT imaging technique with PET. Another error is the scattering error of annihilation gammas and occurs when one or both annihilation gammas are scattered inside the body or other parts due to the Compton event. By placing an energy window for PET detectors, this error can be reduced in a favorable way. This research tries to investigate the effect of loss and scattering from the adjacent organs of the liver in liver tumor imaging with the help of Monte Carlo simulation method and to optimize the energy window in this imaging.
 
 
 
+. For this purpose, first, with the help of MCNPX simulation code, the Pat Siemens detector ring of Biograph 6 model was simulated. Before examining the organs adjacent to the liver in order to further investigate the effect of soft tissue on the scattering and loss of annihilation rays, with the help of a simple geometry of soft tissue and considering two types of spatial distribution for the 511keV gamma source, the effect of soft tissue scattering in PET imaging Checked out. The analysis of the results of the simulations in the third chapter shows that the soft tissue around the point source and the spherical volume with a uniform distribution scatter the gamma rays in such a way that their energy loss is low and almost all of them are within the range of the energy window of PET (-550 350 keV are recorded. The soft tissue around both springs at a distance of 8 cm from the center of the spring has the greatest scattering effect in PET imaging.In the fourth chapter, imaging of a liver tumor was simulated by placing a complete human body phantom with a tumor inside the liver (a spherical gamma source with 511keV energy) and placing it inside the PET ring. To investigate the effect of individual internal organs near the liver, the desired tissue was removed from the full body phantom, and the response function of the PET detector in this case was compared with the response function of the PET detector for the full body phantom.The results showed that the stomach has the most negative effect on liver tumor imaging among the examined organs including heart, kidney, lung and intestine. Examining the results of all the desired tissues on the energy window of the PET detector showed that the effect of scattered rays can be favorably reduced by setting the energy window to 450-550 keV in liver tumor imaging.In the continuation of this investigation, in order to achieve more accuracy, the distribution of radiopharmaceuticals inside the body was also considered in addition to the tumor. Despite the fact that the effect of the loss and dispersion of the organs adjacent to the liver on the destruction gammas is greater in this case compared to the previous case, but the accumulation of the effect of the investigated organs in the detector ring is still in the same range as before. In the fifth chapter, the investigation of braking radiation in PET imaging in soft tissue was discussed. For this purpose, in one step, the 511keV source inside a sphere of soft tissue (in order to investigate the effect of braking radiation of secondary electrons) and in the next step, the source of positron donor 18F inside the same tissue (in order to investigate the effect of braking radiation of positrons) inside the PET detector ring. it placed.The analysis of the results shows that the bremsstrahlung radiation caused by secondary electrons does not have an effect on the imaging due to being outside the energy window range, but on the other hand, the bremsstrahlung radiation caused by positrons causes a slight change in the counts throughout the range of the energy window, which has an adverse effect on the quality. The image can be appropriately reduced by reducing the energy window to 417-550 keV. In the sixth chapter, the scattering effect of annihilation gammas between PET ring detectors was investigated. For this purpose, each PET ring detector was insulated in the simulation so that the gamma ray scattered from aA detector cannot enter another detector. The results showed that the separation of PET ring detectors reduces the number of detectors in the range of the energy window, especially near its lower threshold. This decrease in count was reduced in the presence of a sphere of soft body tissue.
 
-Emotional Voice Conversion, or emotional VC, is a technique of
-converting speech from one emotion state into another one, keeping the basic linguistic information and speaker identity. Previous
-approaches for emotional VC need parallel data and use dynamic
-time warping (DTW) method to temporally align the source-target
-speech parameters. These approaches often define a minimum generation loss as the objective function, such as L1 or L2 loss, to learn
-model parameters. Recently, cycle-consistent generative adversarial
-networks (CycleGAN) have been used successfully for non-parallel
-VC. This paper investigates the efficacy of using CycleGAN for
-emotional VC tasks. Rather than attempting to learn a mapping between parallel training data using a frame-to-frame minimum generation loss, the CycleGAN uses two discriminators and one classifier
-to guide the learning process, where the discriminators aim to differentiate between the natural and converted speech and the classifier
-aims to classify the underlying emotion from the natural and converted speech. The training process of the CycleGAN models randomly pairs source-target speech parameters, without any temporal
-alignment operation. The objective and subjective evaluation results
-confirm the effectiveness of using CycleGAN models for emotional
-VC. The non-parallel training for a CycleGAN indicates its potential
-for non-parallel emotional VC.
+In this project, I have investigated other things that reduce the quality of the image in PET along with the method of correction and application. Such as the distance that a positron travels before annihilation, which I have chosen as the main article.
+
+main article
+
+Positron emission tomography (PET) is a molecular imaging technique that provides a 3D
+image of functional processes in the body in vivo. Some of the radionuclides proposed for PET imaging emit high-energy positrons, which travel some distance before they annihilate (positron range),
+creating significant blurring in the reconstructed images. Their large positron range compromises the
+achievable spatial resolution of the system, which is more significant when using high-resolution
+scanners designed for the imaging of small animals. In this work, we trained a deep neural network
+named Deep-PRC to correct PET images for positron range effects. Deep-PRC was trained with
+modeled cases using a realistic Monte Carlo simulation tool that considers the positron energy
+distribution and the materials and tissues it propagates into. Quantification of the reconstructed PET
+images corrected with Deep-PRC showed that it was able to restore the images by up to 95% without
+any significant noise increase. The proposed method, which is accessible via Github, can provide an
+accurate positron range correction in a few seconds for a typical PET acquisition.
 
 
 
@@ -202,3 +199,11 @@ https://s5.uupload.ir/files/sh1373bme/0A5F195B-7C54-459E-B891-850E368BEA75.MP4
 
  shabnam latifian
  40114140111002
+ 
+ 
+ new project 
+ 
+ 
+ https://ganj.irandoc.ac.ir/#/articles/48ac31b9d65757154dcd61d4b4bb160f
+
+
