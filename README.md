@@ -25,10 +25,79 @@ any significant noise increase. The proposed method, which is accessible via Git
 accurate positron range correction in a few seconds for a typical PET acquisition.
 
 
+-------the link of my video about proposal and the impacy factor of my article-----
+https://drive.google.com/file/d/12nFYPvBILieD7J1y1IY6pAqcBNorp_6Q/view?usp=drive_web
+
+
+https://drive.google.com/file/d/1y0NQRD4CKhcppf44b2JIbmGs8CvH9byC/view?usp=drive_web
+![image](https://github.com/mahdeslami11/CycleGAN--EMOVC/assets/115186860/30dd9151-e6dc-4067-bfe3-d0d60125874f)
+
+the link of my video about main article
+
+https://drive.google.com/file/d/1r7Zweb6VdDOWChB4qBmFgM2k8iv6yw73/view?usp=drive_web
+![image](https://github.com/mahdeslami11/CycleGAN--EMOVC/assets/115186860/8bbe9691-8366-4d3c-85e4-d0299f32b4e8)
+
+https://drive.google.com/file/d/1yeSWJKHcJx9Cn49gnCZPId2Z6-DRIVK5/view?usp=drive_web
+
+https://drive.google.com/file/d/1t03lZGCb0ZGu9n_sxx3w-qv7TN83hK2U/view?usp=drive_web
+
+https://drive.google.com/file/d/1AI7Jy-YUsGQCb1J9Nne9gNMmDCBJc0q3/view?usp=drive_web
+
+https://drive.google.com/file/d/1VPNuBoVDwCjOi5na6U98hJAVDfojUTd_/view?usp=drive_web
+
+https://drive.google.com/file/d/1KfC0p39Pbcc9_J2EvW889WF3PeNaLvUc/view
+![image](https://github.com/mahdeslami11/CycleGAN--EMOVC/assets/115186860/1d5f9c53-d3b9-493b-8858-6599f9ac7f4c)
+
+https://drive.google.com/file/d/1L7oGGHYxHFOyJLrzIR1jKcVIIR_v_2yB/view?usp=drive_web
+
+https://drive.google.com/file/d/1Q-ao3wwqdIqASVuzpZ73of8Hp6NT9dGX/view?usp=drive_web
+
+https://drive.google.com/file/d/1aSPWRqFgOWdSeMoKZHIGTDjluuQiCa3s/view?usp=drive_web
+
+https://drive.google.com/file/d/1FeNGkCxkW9IeXFs0_MUW9Vukf804oOXU/view?usp=drive_web
+![image](https://github.com/mahdeslami11/CycleGAN--EMOVC/assets/115186860/2b06447f-f59a-46e9-a597-2fb9fa3b6661)
+
+
+https://drive.google.com/file/d/1LiucsIhv8_BlhRhtr1Doqnu54P6L9Oxa/view?usp=drive_web
+
+https://drive.google.com/file/d/1qOSmJiBQUdGckiGRzZrQ3elzCkzP6_c7/view?usp=drive_web
+
+https://drive.google.com/file/d/1Igm7cM03d-MHRrnW0ugxnCxfL7ObBbJG/view?usp=drive_web
+
+https://drive.google.com/file/d/1GRZa37Xz_mCPU96JNFj9oidnl67Q2uLX/view?usp=drive_web
+
+https://drive.google.com/file/d/1WlGjTq6Se1kypoje64sAYEoyBJVJDGSx/view?usp=drive_web
+![image](https://github.com/mahdeslami11/CycleGAN--EMOVC/assets/115186860/440e6a08-3db0-4b1e-8737-dda2058bccdf)
+
+the link of video that i reconstructed base on main article
+
+https://drive.google.com/file/d/1tSeHA4zKySb7lAe7J33nwEf-wj3XeaZX/view?usp=drive_web
+https://drive.google.com/file/d/1BvR7zpkLPO-lUFJtnknZFC7shmb_Olbh/view?usp=drive_web
+https://drive.google.com/file/d/16tAJSbxThCDRLZ_XflSb7CAfPO9gD6QR/view?usp=drive_web
+https://drive.google.com/file/d/1g1cUAGmPMC6Ee9_PJkdRq8GtOWSxNVHh/view?usp=drive_web
+https://drive.google.com/file/d/15dnM06-HRBBbrjNFZtuUWHZj6WGUrB8N/view?usp=drive_web
+https://drive.google.com/file/d/1C7iCimFLZ8IopLeHNZQMxrrzL3SVkRhi/view?usp=drive_web
+https://drive.google.com/file/d/1vn47YNJTGpL__1c6ZiHzqt1nz2LqZ1Zs/view?usp=drive_web
+![image](https://github.com/mahdeslami11/CycleGAN--EMOVC/assets/115186860/b13f407a-ca86-47e0-9bcc-f97115d94f9d)
+
+the link of video that i defensed my project 
+https://drive.google.com/file/d/15agojCgy3uVGLNd_WUgf8v_nL9yevmQQ/view?usp=drive_web
+
+https://drive.google.com/file/d/1Tb9vvNgC6STRTCYcTcPlMJHEAJTvZGZY/view?usp=drive_web
+
+https://drive.google.com/file/d/1dJuCI5ZpZY1sc04Jf6GI08UVtNjSWkuY/view?usp=drive_web
+
+https://drive.google.com/file/d/1KjUgrGeDnQ3o_Gee639eVU5Jnq3WUQmK/view?usp=drive_web
+
+https://mail.google.com/mail/u/0?ui=2&ik=08742abf19&attid=0.1&permmsgid=msg-a:r-5577031429781230989&th=18866c2ca8651888&view=att&disp=safe&realattid=f_li8m7e5w0
+![image](https://github.com/mahdeslami11/CycleGAN--EMOVC/assets/115186860/09d26c7d-8086-41e1-afca-7d467327c575)
 
 
 
-![images](https://user-images.githubusercontent.com/115186860/210151583-d48f6cdb-ced4-4832-a8d5-1dbf6e8d213b.jpg)
+
+
+
+
 
 
 
@@ -193,6 +262,7 @@ https://s5.uupload.ir/files/sh1373bme/0A5F195B-7C54-459E-B891-850E368BEA75.MP4
 
 
 
+
  
  
 
@@ -201,7 +271,7 @@ https://s5.uupload.ir/files/sh1373bme/0A5F195B-7C54-459E-B891-850E368BEA75.MP4
  40114140111002
  
  
- new project 
+
  
  
  https://ganj.irandoc.ac.ir/#/articles/48ac31b9d65757154dcd61d4b4bb160f
