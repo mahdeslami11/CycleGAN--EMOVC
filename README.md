@@ -92,11 +92,31 @@ https://drive.google.com/file/d/1KjUgrGeDnQ3o_Gee639eVU5Jnq3WUQmK/view?usp=drive
 https://mail.google.com/mail/u/0?ui=2&ik=08742abf19&attid=0.1&permmsgid=msg-a:r-5577031429781230989&th=18866c2ca8651888&view=att&disp=safe&realattid=f_li8m7e5w0
 ![image](https://github.com/mahdeslami11/CycleGAN--EMOVC/assets/115186860/09d26c7d-8086-41e1-afca-7d467327c575)
 
+the link of my main article (translate)
 
 
 
+https://mail.google.com/mail/u/0?ui=2&ik=08742abf19&attid=0.1&permmsgid=msg-a:r8864320679496171259&th=188a104ae51c7e98&view=att&disp=inline&realattid=f_liirnt4i2
+
+the link of my main article
+
+https://mail.google.com/mail/u/0?ui=2&ik=08742abf19&attid=0.4&permmsgid=msg-a:r8864320679496171259&th=188a104ae51c7e98&view=att&disp=inline&realattid=f_liirnnsu1
 
 
+the link of my proposal
+
+https://mail.google.com/mail/u/0?ui=2&ik=08742abf19&attid=0.3&permmsgid=msg-a:r8864320679496171259&th=188a104ae51c7e98&view=att&disp=safe&realattid=f_liirneol0
+
+
+
+the link of my article
+
+https://mail.google.com/mail/u/0?ui=2&ik=08742abf19&attid=0.2&permmsgid=msg-a:r8864320679496171259&th=188a104ae51c7e98&view=att&disp=safe&realattid=f_liiro3pj3
+
+
+the link of my another article that i have used
+
+https://mail.google.com/mail/u/0?ui=2&ik=08742abf19&attid=0.5&permmsgid=msg-a:r8864320679496171259&th=188a104ae51c7e98&view=att&disp=inline&realattid=f_liiroke54
 
 
 
